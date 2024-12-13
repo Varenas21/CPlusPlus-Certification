@@ -1,7 +1,43 @@
 #include <iostream>
 #include <typeinfo>
 #include <vector>
-#include "Conditionals.h"
+#include "Datatypes.h"
+
+void Pointers() {
+/*
+* Variable type and name location in memory
+* memory is allocated based on datatype and associated with a name
+* Name is used as an index to map to a memory address
+*
+*/
+//int x;
+//x = 1;
+//int y; // Represents a variable in another location in memory
+//y = x; // It now contains the same value as X but is now in a different location under a different variable
+
+// Pointer
+//int* ip; Holds the address of another variable, poitner to an integer value
+//ip = &x; Reference or address operator, assigns address of x to pointer (pointer points to the variable x)
+//y = *ip; Dereferencing we access the value pointed to by the pointer. Equavilant of y = x;
+
+	int x{ 7 };
+	int* ip = &x;
+	int& y = x; // Reference to an int
+
+	cout << "The value of x is " << x << std::endl;
+	cout << "The value of ip is " << *ip << std::endl;
+	cout << "The value of y is " << y << std::endl;
+
+	//int z{ 73 };
+	//ip = &z;
+	y = 42; // Changes the value of x
+
+	//*ip = 42;
+
+	cout << "The value of x is " << x << std::endl;
+	cout << "The value of ip is " << *ip << std::endl;
+	cout << "The value of y is " << y << std::endl;
+}
 
 
 struct S {
@@ -9,7 +45,6 @@ struct S {
 	double d{};
 	const char* s{};
 };
-
 
 void Conditional() {
 	auto x = 42;
@@ -21,7 +56,7 @@ void Conditional() {
 
 	//Used for non complex statements
 	auto s = x > y ? "yes" : "no"; // If the condition is true return first value (yes) otherwise return second value (no)
-	cout << "S is " << s << std::endl; 
+	cout << "S is " << s << std::endl;
 
 	// LOOPS
 	// While will continue while the condition is true, if it is not then it will exit out
@@ -48,7 +83,7 @@ void Conditional() {
 
 	// FOR 
 	cout << "-- FOR --" << std::endl;
-	const char string[] { "string" };
+	const char string[]{ "string" };
 	for (auto* p = string; *p; ++p)
 	{
 		cout << "Element in index i:" << i << std::endl;
@@ -96,8 +131,6 @@ struct score {
 	points_t p{};
 	rank_t r{};
 };
-
-
 
 int Qualifiers() {
 	score s{ 5,1 };

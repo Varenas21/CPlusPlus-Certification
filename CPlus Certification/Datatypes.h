@@ -3,6 +3,7 @@
 
 using std::cout;
 
+void Pointers();
 void Conditional();
 void Datatypes();
 int Qualifiers();

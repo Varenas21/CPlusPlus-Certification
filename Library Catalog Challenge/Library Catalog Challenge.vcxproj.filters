@@ -15,16 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CPlus Certification.cpp">
+    <ClCompile Include="Library Catalog Challenge.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Datatypes.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Datatypes.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

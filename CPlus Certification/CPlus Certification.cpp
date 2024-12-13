@@ -1,6 +1,5 @@
 #include <iostream>
-#include "Conditionals.h"
-#include "PointersAndReferences.h"
+#include "Datatypes.h"
 
 using std::cout;
 
@@ -13,7 +12,6 @@ int main()
 	//Datatypes();
 
 	const int i{ 42 }; // Read Only
-
 
 	cout << "The integer is " << i << std::endl;
 	Qualifiers();

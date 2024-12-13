@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{da33a1ff-f1f9-4d78-bed3-8dac76325930}</ProjectGuid>
-    <RootNamespace>CPlusCertification</RootNamespace>
+    <ProjectGuid>{64236014-c4c2-4c5e-8cae-c3cd98e9720d}</ProjectGuid>
+    <RootNamespace>LibraryCatalogChallenge</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,11 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CPlus Certification.cpp" />
-    <ClCompile Include="Datatypes.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Datatypes.h" />
+    <ClCompile Include="Library Catalog Challenge.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
