@@ -4,3 +4,5 @@
 using std::cout;
 
 void Conditional();
+void Datatypes();
+int Qualifiers();

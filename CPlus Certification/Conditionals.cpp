@@ -1,5 +1,14 @@
 #include <iostream>
+#include <typeinfo>
+#include <vector>
 #include "Conditionals.h"
+
+
+struct S {
+	int i{};
+	double d{};
+	const char* s{};
+};
 
 
 void Conditional() {
@@ -39,9 +48,69 @@ void Conditional() {
 
 	// FOR 
 	cout << "-- FOR --" << std::endl;
-	for (int i{ 0 }; i < 5; ++i)
+	const char string[] { "string" };
+	for (auto* p = string; *p; ++p)
 	{
 		cout << "Element in index i:" << i << std::endl;
-		cout << "Element in array i: " << array[i] << std::endl;
+		cout << "Char in array i: " << *p << std::endl;
 	}
+
+	for (const auto& e : string)
+	{
+		if (e == 0) break;
+		cout << "Element is: " << e << std::endl;
+	}
+}
+
+void Datatypes() {
+	const size_t byte{ 8 };
+
+	float f{};
+	double df{};
+	long double ldf{};
+
+	cout << "Size of float is: " << sizeof(f) * byte << std::endl;
+	cout << "Size of double is: " << sizeof(df) * byte << std::endl;
+	cout << "Size of long double is: " << sizeof(ldf) * byte << std::endl;
+
+	std::string s{ "This is a string" };
+	auto x = s;
+	cout << "x is " << x << std::endl;
+	cout << "Type of x is " << typeid(x).name() << std::endl;
+
+	std::vector<int> vi{ 1,2,3,4,5 };
+	for (std::vector<int>::iterator it = vi.begin(); it != vi.end(); it++)
+	{
+		cout << "int is " << *it << std::endl;
+		cout << "Type of it is " << typeid(it).name();
+	}
+}
+
+//typedef uint32_t points_t;
+//typedef uint32_t rank_t;
+
+using points_t = uint32_t;
+using rank_t = uint32_t;
+
+struct score {
+	points_t p{};
+	rank_t r{};
+};
+
+
+
+int Qualifiers() {
+	score s{ 5,1 };
+	cout << "Score s had " << s.p << "points and a rank of " << s.r << std::endl;
+
+	// Structs
+	S s1{ 3, 47.9, "string one" };
+	auto* sp = &s1;
+	sp->d = 73.0;
+	cout << "s1 : " << s1.i << s1.d << s1.s << std::endl;
+
+
+	static int x{ 7 }; // No longer discards or reinitializes with static
+	return ++x;
+
 }
